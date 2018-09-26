@@ -67,7 +67,7 @@ int main()
 #include <stdlib.h>
 #include <time.h>
 //====================================================
-
+/*
 int main (void)
 {
 //Pointer	and	variable	declaration
@@ -120,3 +120,4 @@ int main (void)
 			for (i=0;	i<9999999;	i++);
 	}
 }
+*/
