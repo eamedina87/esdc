@@ -8,16 +8,19 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/helloworld.c \
+../src/lab0game.c \
 ../src/mygame.c \
 ../src/platform.c 
 
 OBJS += \
 ./src/helloworld.o \
+./src/lab0game.o \
 ./src/mygame.o \
 ./src/platform.o 
 
 C_DEPS += \
 ./src/helloworld.d \
+./src/lab0game.d \
 ./src/mygame.d \
 ./src/platform.d 
 

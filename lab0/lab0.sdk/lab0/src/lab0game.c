@@ -29,7 +29,7 @@
 * this Software without prior written authorization from Xilinx.
 *
 ******************************************************************************/
-/*
+
 #include "xparameters.h"
 #include "xgpio.h"
 #include "xuartps.h"
@@ -48,6 +48,7 @@ int main (void)
 //Pointer	and	variable	declaration
 	XGpio dip,	push,	leds;
 	int i,	psb_status,	sw_code;
+	int gameMode, randomNumber, playerNumber, cont=0;
 	char code[5] = {'0','0','0','0','0'};
 	xil_printf("-- Start	of	the	Program	--\r\n");
 	//	Pointer	initialization
@@ -62,79 +63,94 @@ int main (void)
 	//Read	the	initial	buttons	status
 	//psb_status	=	XGpio_DiscreteRead(&push,	1);
 	//xil_printf("Initial	Push	Buttons	Status	(should	be	0)	%x\r\n",	psb_status);
+	//runGame(&dip, &push, &leds);
 
-
-	runGame(&dip, &push, &leds);
-}
-
-runGame(XGpio dip, XGpio push, XGpio leds){
-    int gameMode, randomNumber, playerNumber, cont=0;
-    char hexChain[HEX_LENGTH+1];
-    int player1Result;
-    int player2Result;
-    printf("getGameMode\n");
-    do{
-        gameMode = displayChooseMode(&dip, &push);
-    } while (gameMode!=1 && gameMode!=2);
-    printf("getPlayers");
-    do{
-        playerNumber = displayChoosePlayers(&dip, &push);
-    } while (playerNumber!=1 && playerNumber!=2);
-
-    randomNumber = generateRandomNumber();
-    sprintf(hexChain, "%04X", randomNumber);
-    printf("Char: %s\n", hexChain);
-
-    player1Result = getPlayerResult(gameMode, 1, &dip, &push);
-    if (playerNumber==2)
-        player2Result = getPlayerResult(gameMode, 2, &dip, &push);
-
-    compareResultForPlayer(randomNumber, player1Result, 1, &leds);
-    if (playerNumber==2)
-        compareResultForPlayer(randomNumber, player2Result, 2, &leds);
-}
-
-int displayChooseMode(XGpio dip, XGpio push){
-    return displayChooseDefault("Please choose your play mode: 1(MEMORY) 2(TIME):", &dip, &push);
-}
-
-int displayChoosePlayers(XGpio dip, XGpio push){
-    return displayChooseDefault("Please choose number of players: 1(ONE) 2(TWO):", &dip, &push);
-}
-
-int displayChooseDefault(char *message, XGpio dip, XGpio push){
-    printf("%s", message);
-    return getIntInput(&dip, &push);
-}
-
-int getIntInput(XGpio dip, XGpio push){
-    int mInput;
-    int mButtonStatus;
-    printf("getIntInput\n");
-    while(1){
-    //do {
-    	printf("while mButtonStatus\n");
+	char hexChain[HEX_LENGTH+1];
+	int player1Result;
+	int player2Result;
+	int mButtonStatus;
+	/** CHOOSE PLAY MODE **/
+	xil_printf("Please choose your play mode: 1(MEMORY) 2(TIME):");
+	do{
 		mButtonStatus = XGpio_DiscreteRead(&push,1);
-		printf("mButtonStatus:%d\n", mButtonStatus);
-		if(mButtonStatus){
-			printf("if mInput\n");
-			mInput = XGpio_DiscreteRead(&dip,	1);
-			continue;
+		if(mButtonStatus>0){
+			gameMode = XGpio_DiscreteRead(&dip,	1);
 		}
-    //} while (mButtonStatus=0);
-    }
+	} while (gameMode!=1 && gameMode!=2);
+	xil_printf("%d\n", gameMode);
+	for (i=0;	i<9999999;	i++);
+	/** CHOOSE PLAYERS **/
+	xil_printf("Please choose number of players: 1(ONE) 2(TWO):");
+	do{
+		mButtonStatus = XGpio_DiscreteRead(&push,1);
+		if(mButtonStatus>0){
+			playerNumber = XGpio_DiscreteRead(&dip,	1);
+		}
+	} while (playerNumber!=1 && playerNumber!=2);
+	xil_printf("%d\n", playerNumber);
+	for (i=0;	i<9999999;	i++);
+	/** GENERATE RANDOM HEX NUMBER **/
+	randomNumber = generateRandomNumber();
+	sprintf(hexChain, "%04X", randomNumber);
+	printf("Char: %s\n", hexChain);
+	for (i=0;	i<(9999999*9999999);	i++);
+	/** PLAYER 1 GAMEPLAY **/
+	if (gameMode==1){
+		printLines(50);
+	}
+	printf("**********Your turn Player 1**********\n");
+	int charCount = 0;
+	int numChars[HEX_LENGTH];
+	char chars[HEX_LENGTH];
+	char result[HEX_LENGTH+1];
+	int input = -1;
+	while (charCount<HEX_LENGTH){
+		xil_printf("Write character at position %i: ", charCount+1);
+		//int input = getIntInput(dip, push);
+		do{
+			mButtonStatus = XGpio_DiscreteRead(&push,1);
+			//if(mButtonStatus>0){
+			input = XGpio_DiscreteRead(&dip,	1);
+			//}
+		} while (input = -1);
+		numChars[charCount] = input;
+		xil_printf("input: %d", input);
+		charCount++;
+		for (i=0;	i<9999999999;	i++);
+	}
+	sprintf(result,"%X%X%X%X%X", numChars[0], numChars[1], numChars[2], numChars[3], numChars[4]);
+	printf("input char: %s", result);
+	//return (int)strtol(result, NULL, 16);
 
-    scanf("%d", &mInput);
-    return mInput;
+	/*player1Result = getPlayerResult(gameMode, 1, &dip, &push);
+	if (playerNumber==2)
+		player2Result = getPlayerResult(gameMode, 2, &dip, &push);
+
+	compareResultForPlayer(randomNumber, player1Result, 1, &leds);
+	if (playerNumber==2)
+		compareResultForPlayer(randomNumber, player2Result, 2, &leds);
+	 */
 }
+
+
 
 int generateRandomNumber(){
     int mRand;
-    //mRand = arc4random_uniform(FIVE_LETTERS_MAX);
-    mRand = rand() / (RAND_MAX / 16 + 1);
+    mRand = rand() % (FIVE_LETTERS_MAX + 1);
     return mRand;
 }
 
+printLines(int value){
+	printf("\n");
+	int cont = 0;
+    while (cont<value){
+        printf("**************************************\n");
+    	cont++;
+    }
+}
+
+
+/*
 int getPlayerResult(int gameMode, int playerNumber, XGpio dip, XGpio push){
     switch (gameMode){
         case 1: return getMemoryResultForPlayer(playerNumber, &dip, &push);
@@ -197,17 +213,12 @@ compareResultForPlayer(int expectedResult, int obtainedResult, int playerNumber)
 }
 
 waitSeconds(int value){
-    /*time_t start = time(NULL);
+    time_t start = time(NULL);
     while (time(NULL) - start < value) {
 
-    }*/
-//}
-
-/*
-printLines(int value){
-	printf("\n");
-    for (int i=0; i<value; i++){
-        printf("**************************************\n");
     }
-}
-*/
+}*/
+
+
+
+
