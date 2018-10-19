@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+# 
+# Start of session at: Fri Sep 28 12:48:04 2018
+# Process ID: 6572
+# Log file: C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/lab1.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/lab1.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

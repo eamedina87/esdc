@@ -1,0 +1,102 @@
+12:24:58 INFO  : Processing command line option -hwspec C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/lab1.sdk/hardware_lab1_wrapper.hdf.
+12:25:12 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.3.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+12:41:28 INFO  : FPGA configured successfully with bitstream "C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/lab1.sdk/hardware_lab1_wrapper_hw_platform_0/hardware_lab1_wrapper.bit"
+12:43:00 INFO  : ps7_init is completed.
+12:43:00 INFO  : ps7_post_config is completed.
+12:43:00 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:48:04 ERROR : Unable to disconnect from existing targets
+java.lang.NullPointerException
+	at com.xilinx.sdk.targetmanager.internal.json.XMDJSONProcess.issueCommand(XMDJSONProcess.java:144)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectTarget(TM.java:324)
+	at com.xilinx.sdk.targetmanager.internal.TM.disconnectExistingTargets(TM.java:306)
+	at com.xilinx.sdk.targetmanager.internal.TM.terminate(TM.java:210)
+	at com.xilinx.sdk.targetmanager.TMPlugin.stop(TMPlugin.java:58)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$2.run(BundleContextImpl.java:771)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.stop(BundleContextImpl.java:764)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.stopWorker(BundleHost.java:510)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.suspend(AbstractBundle.java:566)
+	at org.eclipse.osgi.framework.internal.core.Framework.suspendBundle(Framework.java:1206)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.decFWSL(StartLevelManager.java:592)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:257)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:636)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1450)
+12:48:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+12:08:54 INFO  : Processing command line option -hwspec C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/mixed_approach/mixed_approach.sdk/hardware_lab1_wrapper.hdf.
+12:08:58 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.3.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+12:10:53 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:10:53 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:10:53 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:10:53 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:10:53 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:24:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1539944624323,  Project:1539943595884
+12:24:40 INFO  : Project hardware_lab1_wrapper_hw_platform_1's source hardware specification located at C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/mixed_approach/mixed_approach.sdk/hardware_lab1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+12:25:00 INFO  : Project hardware_lab1_wrapper_hw_platform_1's source hardware specification location will not be monitored anymore.
+12:25:42 INFO  : Processing command line option -hwspec C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/mixed_approach/mixed_approach.sdk/hardware_lab1_wrapper.hdf.
+12:25:44 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2014.3.1/scripts/xsdb/xsdb/xsdb-server.tcl 2450
+12:26:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:21 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:26:41 WARN  :  [Hsi 55-1559] Software Design already exists with Name C:\Users\erick.medina\Documents\ESDC\esdc\lab1\hardware\lab1.sdk\lab1_bsp\system.mss
+12:28:30 ERROR : FPGA Configuration failed.Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+12:28:50 ERROR : FPGA Configuration failed.Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+12:29:04 ERROR : FPGA Configuration failed.Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+12:31:59 ERROR : FPGA Configuration failed.Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+12:32:29 ERROR : FPGA Configuration failed.Connection to Board Failed
+
+
+    Unknown Error Occured
+    Cable is not connected to the host
+
+12:33:49 INFO  : FPGA configured successfully with bitstream "C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/mixed_approach/mixed_approach.sdk/hardware_lab1_wrapper_hw_platform_2/hardware_lab1_wrapper.bit"
+12:34:21 INFO  : ps7_init is completed.
+12:34:22 INFO  : ps7_post_config is completed.
+12:34:22 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:36:42 INFO  : FPGA configured successfully with bitstream "C:/Users/erick.medina/Documents/ESDC/esdc/lab1/hardware/mixed_approach/mixed_approach.sdk/hardware_lab1_wrapper_hw_platform_2/hardware_lab1_wrapper.bit"
+12:37:18 INFO  : ps7_init is completed.
+12:37:18 INFO  : ps7_post_config is completed.
+12:37:18 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:40:19 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:40:34 INFO  : Processor reset is completed for ps7_cortexa9_0
+12:45:08 INFO  : ps7_cortexa9_0 Processor is in use. Please stop existing Run or Debug sessions before launching.
+12:45:12 INFO  : Processor reset is completed for ps7_cortexa9_0
+13:09:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

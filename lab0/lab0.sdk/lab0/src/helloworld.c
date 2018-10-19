@@ -114,7 +114,7 @@ int main (void)
 			sw_code	=	XGpio_DiscreteRead(&dip,	1);
 			xil_printf("The	code	detected	is:	%x\r\n",	sw_code);
 			//	Write	code	of	switches	to	leds (example)
-				XGpio_DiscreteWrite(&leds,	1,	sw_code);
+
 			}
 			//	Waiting	cycles
 			for (i=0;	i<9999999;	i++);
