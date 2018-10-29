@@ -1,0 +1,39 @@
+{
+   guistr: "# # String gsaved with Nlview 6.4.7  2014-07-30 bk=1.3165 VDI=35 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port clkin -pg 1 -y 210 -defaultsOSRD
+preplace port vga_hs -pg 1 -y 400 -defaultsOSRD
+preplace port vga_vs -pg 1 -y 280 -defaultsOSRD
+preplace portBus vga_b -pg 1 -y 360 -defaultsOSRD
+preplace portBus sw -pg 1 -y 270 -defaultsOSRD
+preplace portBus vga_r -pg 1 -y 340 -defaultsOSRD
+preplace portBus btn -pg 1 -y 250 -defaultsOSRD
+preplace portBus led -pg 1 -y 150 -defaultsOSRD
+preplace portBus vga_g -pg 1 -y 380 -defaultsOSRD
+preplace inst comparator_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace inst VGA_SYNC_0 -pg 1 -lvl 3 -y 400 -defaultsOSRD
+preplace inst session3_0 -pg 1 -lvl 4 -y 190 -defaultsOSRD
+preplace inst f_div5_0 -pg 1 -lvl 1 -y 210 -defaultsOSRD
+preplace netloc btn_1 1 0 4 NJ 150 NJ 260 NJ 260 930
+preplace netloc VGA_SYNC_0_vga_vs 1 3 2 950 280 NJ
+preplace netloc VGA_SYNC_0_vga_b 1 3 2 N 360 NJ
+preplace netloc clkin_1 1 0 1 N
+preplace netloc VGA_SYNC_0_vga_r 1 3 2 N 340 NJ
+preplace netloc session3_0_ypos_min 1 1 4 320 40 NJ 100 NJ 100 1170
+preplace netloc f_div5_0_clkout 1 1 3 270 280 640 160 NJ
+preplace netloc VGA_SYNC_0_vga_g 1 3 2 N 380 NJ
+preplace netloc VGA_SYNC_0_pixel_row 1 1 3 310 300 NJ 290 930
+preplace netloc VGA_SYNC_0_vga_hs 1 3 2 N 400 NJ
+preplace netloc session3_0_xpos_MAX 1 1 4 310 20 NJ 20 NJ 20 1180
+preplace netloc comparator_0_pixel_color 1 2 1 630
+preplace netloc VGA_SYNC_0_pixel_column 1 1 3 320 290 NJ 280 940
+preplace netloc sw_1 1 0 4 NJ 160 NJ 270 NJ 270 960
+preplace netloc session3_0_ypos_MAX 1 1 4 290 30 NJ 90 NJ 90 1200
+preplace netloc session3_0_led 1 4 1 N
+preplace netloc session3_0_xpos_min 1 1 4 300 10 NJ 10 NJ 10 1190
+levelinfo -pg 1 90 190 500 810 1070 1220
+",
+}
+{
+   da_ps7_cnt: "1",
+}

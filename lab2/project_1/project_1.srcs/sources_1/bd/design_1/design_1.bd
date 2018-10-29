@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2014.3.1" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>vga_vs</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>led</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>btn</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>sw</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clkin</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_r</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>4</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>4</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_g</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>5</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>vga_hs</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>comparator_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="comparator" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_comparator_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>session3_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="session3" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_session3_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>f_div5_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="f_div5" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_f_div5_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>VGA_SYNC_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="VGA_SYNC" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_VGA_SYNC_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_vga_vs</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="vga_vs"/>
+        <spirit:externalPortReference spirit:portRef="vga_vs"/>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="vga_vs"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>f_div5_0_clkout</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="f_div5_0" spirit:portRef="clkout"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="clk_25"/>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="clk_25"/>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="clock_25Mhz"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>session3_0_led</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="led"/>
+        <spirit:externalPortReference spirit:portRef="led"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>session3_0_xpos_min</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="xpos_min"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="cx_min"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>session3_0_xpos_MAX</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="xpos_MAX"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="cx_max"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>session3_0_ypos_min</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="ypos_min"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="cy_min"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>session3_0_ypos_MAX</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="ypos_MAX"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="cy_max"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>btn_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="btn"/>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="btn"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>sw_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="sw"/>
+        <spirit:internalPortReference spirit:componentRef="session3_0" spirit:portRef="sw"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clkin_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clkin"/>
+        <spirit:internalPortReference spirit:componentRef="f_div5_0" spirit:portRef="clkin"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_vga_r</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="vga_r"/>
+        <spirit:externalPortReference spirit:portRef="vga_r"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_vga_b</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="vga_b"/>
+        <spirit:externalPortReference spirit:portRef="vga_b"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_vga_g</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="vga_g"/>
+        <spirit:externalPortReference spirit:portRef="vga_g"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_vga_hs</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="vga_hs"/>
+        <spirit:externalPortReference spirit:portRef="vga_hs"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_pixel_row</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="pixel_row"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="pixel_row"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>VGA_SYNC_0_pixel_column</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="pixel_column"/>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="pixel_column"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>comparator_0_pixel_color</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="comparator_0" spirit:portRef="pixel_color"/>
+        <spirit:internalPortReference spirit:componentRef="VGA_SYNC_0" spirit:portRef="color_in"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

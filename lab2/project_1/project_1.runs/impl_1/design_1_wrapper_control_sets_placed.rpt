@@ -1,0 +1,62 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.3.1 (win64) Build 1056140 Thu Oct 30 17:03:40 MDT 2014
+| Date         : Thu Oct 25 13:49:35 2018
+| Host         : c4d7 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |     9 |
+| Minimum Number of register sites lost to control set restrictions |    36 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           12 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              10 |            3 |
+| Yes          | No                    | No                     |              28 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              22 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+
+|          Clock Signal          |                   Enable Signal                  |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
++--------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/session3_0/U0/n_0_ymin[9]_i_2         | design_1_i/session3_0/U0/n_0_ymax[3]_i_1 |                1 |              4 |
+|  clkin_IBUF_BUFG               |                                                  |                                          |                1 |              4 |
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/session3_0/U0/n_0_ymin[9]_i_2         |                                          |                3 |              8 |
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/session3_0/U0/n_0_ymin[9]_i_2         | design_1_i/session3_0/U0/n_0_ymin[9]_i_1 |                5 |              8 |
+|  design_1_i/f_div5_0/U0/clkout |                                                  | design_1_i/VGA_SYNC_0/U0/clear           |                3 |             10 |
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/VGA_SYNC_0/U0/sel                     | design_1_i/VGA_SYNC_0/U0/v_count0        |                3 |             10 |
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/VGA_SYNC_0/U0/n_0_pixel_row[9]_i_1    |                                          |                3 |             10 |
+|  design_1_i/f_div5_0/U0/clkout | design_1_i/VGA_SYNC_0/U0/n_0_pixel_column[9]_i_1 |                                          |                3 |             10 |
+|  design_1_i/f_div5_0/U0/clkout |                                                  |                                          |               11 |             20 |
++--------------------------------+--------------------------------------------------+------------------------------------------+------------------+----------------+
+
+
