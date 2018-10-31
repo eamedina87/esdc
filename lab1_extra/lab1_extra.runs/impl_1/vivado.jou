@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Wed Oct 31 14:17:18 2018
+# Process ID: 7216
+# Log file: C:/Users/erick.medina/Documents/ESDC/esdc/lab1_extra/lab1_extra.runs/impl_1/lab1_extra_wrapper.vdi
+# Journal file: C:/Users/erick.medina/Documents/ESDC/esdc/lab1_extra/lab1_extra.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source lab1_extra_wrapper.tcl -notrace

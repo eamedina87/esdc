@@ -1,8 +1,8 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.3.1 (win64) Build 1056140 Thu Oct 30 17:03:40 MDT 2014
-| Date             : Tue Oct 30 16:19:33 2018
-| Host             : c4d2 running 64-bit Service Pack 1  (build 7601)
+| Date             : Wed Oct 31 12:39:43 2018
+| Host             : c4d10 running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
 | Device           : xc7z010clg400-1
@@ -133,8 +133,8 @@ Table of Contents
 +-------------------------------+---------------------------------------------------------+-----------------+
 | Clock                         | Domain                                                  | Constraint (ns) |
 +-------------------------------+---------------------------------------------------------+-----------------+
-| sys_clock                     | sys_clock                                               |             8.0 |
 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0 |            10.0 |
+| sys_clock                     | sys_clock                                               |             8.0 |
 | clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0 |             8.0 |
 +-------------------------------+---------------------------------------------------------+-----------------+
 

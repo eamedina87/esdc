@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='L:/esdc-remote/lab2_extra/lab2_extra/lab2_extra.runs/impl_1/usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Tue Oct 30 16:21:18 2018'>
+<webTalkData  fileName='C:/Users/erick.medina/Documents/ESDC/esdc/lab2_extra/lab2_extra/lab2_extra.runs/impl_1/usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Wed Oct 31 12:41:09 2018'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="1056140" description="" />
-  <keyValuePair key="date_generated" value="Tue Oct 30 16:21:18 2018" description="" />
+  <keyValuePair key="date_generated" value="Wed Oct 31 12:41:09 2018" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2014.3.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="df073f8a412f4ba692e7033bf6342bdd" description="" />
   <keyValuePair key="project_iteration" value="0" description="" />
-  <keyValuePair key="random_id" value="5d1195cdb0b159a1b8fcc82c41430af6" description="" />
+  <keyValuePair key="random_id" value="6c3335ba4c535101ab63a61b5a6f759a" description="" />
   <keyValuePair key="registration_id" value="174215380_174171543_210684238_527" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
   <keyValuePair key="target_device" value="xc7z010" description="" />
@@ -186,7 +186,7 @@
    <keyValuePair key="movable_instances" value="408" description="" />
    <keyValuePair key="nets" value="473" description="" />
    <keyValuePair key="pins" value="4640" description="" />
-   <keyValuePair key="placer_runtime" value="1.707000" description="" />
+   <keyValuePair key="placer_runtime" value="2.699000" description="" />
    <keyValuePair key="placer_timing_driven" value="1" description="" />
    <keyValuePair key="pll" value="0" description="" />
    <keyValuePair key="threads" value="2" description="" />
@@ -465,7 +465,7 @@
    <keyValuePair key="nets" value="473" description="" />
    <keyValuePair key="pins" value="4640" description="" />
    <keyValuePair key="pll" value="0" description="" />
-   <keyValuePair key="router_runtime" value="14.536000" description="" />
+   <keyValuePair key="router_runtime" value="15.649000" description="" />
    <keyValuePair key="router_timing_driven" value="1" description="" />
    <keyValuePair key="threads" value="2" description="" />
    <keyValuePair key="timing_constraints_exist" value="1" description="" />
@@ -495,9 +495,9 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:02:31s" description="" />
-   <keyValuePair key="memory_gain" value="405.965MB" description="" />
-   <keyValuePair key="memory_peak" value="603.809MB" description="" />
+   <keyValuePair key="elapsed" value="00:02:19s" description="" />
+   <keyValuePair key="memory_gain" value="406.645MB" description="" />
+   <keyValuePair key="memory_peak" value="603.801MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="9" description="">

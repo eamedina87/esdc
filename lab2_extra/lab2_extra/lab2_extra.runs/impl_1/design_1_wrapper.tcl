@@ -42,7 +42,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 
@@ -52,10 +51,10 @@ set rc [catch {
   set_param gui.test TreeTableDev
   debug::add_scope template.lib 1
   open_checkpoint design_1_wrapper_routed.dcp
-  set_property webtalk.parent_dir L:/esdc-remote/lab2_extra/lab2_extra/lab2_extra.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/erick.medina/Documents/ESDC/esdc/lab2_extra/lab2_extra/lab2_extra.cache/wt [current_project]
   write_bitstream -force design_1_wrapper.bit 
-  if { [file exists L:/esdc-remote/lab2_extra/lab2_extra/lab2_extra.runs/synth_1/design_1_wrapper.hwdef] } {
-    catch { write_sysdef -hwdef L:/esdc-remote/lab2_extra/lab2_extra/lab2_extra.runs/synth_1/design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
+  if { [file exists C:/Users/erick.medina/Documents/ESDC/esdc/lab2_extra/lab2_extra/lab2_extra.runs/synth_1/design_1_wrapper.hwdef] } {
+    catch { write_sysdef -hwdef C:/Users/erick.medina/Documents/ESDC/esdc/lab2_extra/lab2_extra/lab2_extra.runs/synth_1/design_1_wrapper.hwdef -bitfile design_1_wrapper.bit -meminfo design_1_wrapper.mmi -file design_1_wrapper.sysdef }
   }
   close_msg_db -file write_bitstream.pb
 } RESULT]
